@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowLog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="15pt"
+            android:paddingTop="35dp"
+            android:gravity="center"
+            android:id="@+id/welcomeOrNot"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12pt"
+            android:text = ""
+            android:id="@+id/username"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Il tuo profilo"
+            android:id="@+id/profile"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/avatar"
+            android:id="@+id/img"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:text="indietro"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
