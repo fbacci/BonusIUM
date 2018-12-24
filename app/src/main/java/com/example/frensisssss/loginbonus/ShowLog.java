@@ -51,17 +51,16 @@ public class ShowLog extends AppCompatActivity {
 
                 }
             });
-        } else {
-            welcomeOrNot.setText("Accesso Negato!");
+        } else welcomeOrNot.setText("Accesso Negato!");
 
-            goBack.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent goMain = new Intent(ShowLog.this,
-                            MainActivity.class);
-                    startActivity(goMain);
-                }
-            });
-        }
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goMain = new Intent(ShowLog.this,
+                        MainActivity.class);
+                startActivity(goMain);
+            }
+        });
     }
 }

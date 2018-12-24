@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA="com.example.frensisssss.loginbonus.User";
     UserFactory uf = UserFactory.getInstance();
     EditText username, password;
-    TextView errore;
     Button login;
 
     @Override
@@ -24,10 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
-        errore = findViewById(R.id.errore);
         login = findViewById(R.id.login);
-
-        errore.setVisibility(View.GONE);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean check(){
-        if(username.getText() == null || username.getText().length() == 0
-           || password.getText() == null || password.getText().length() == 0) {
-            errore.setText("ERRORE! Inserire tutti i dati.");
-            errore.setVisibility(View.VISIBLE);
+         if((username.getText() == null || username.getText().length() == 0) &&
+        (password.getText() == null || password.getText().length() == 0)){
+             username.setError("ERRORE! Inserire lo username.");
+             password.setError("ERRORE! Inserire la password.");
+        } else if(username.getText() == null || username.getText().length() == 0) {
+            username.setError("ERRORE! Inserire lo username.");
+        } else if(password.getText() == null || password.getText().length() == 0){
+            password.setError("ERRORE! Inserire la password.");
         } else return true;
 
         return false;
